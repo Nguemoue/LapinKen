@@ -1,0 +1,1 @@
+<img src="{{asset('img/lapin2.jpg')}}" width="50px" class="rounded img-fluid img" style="border-radius: 80%" alt="">
