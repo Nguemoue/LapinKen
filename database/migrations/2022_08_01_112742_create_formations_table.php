@@ -15,6 +15,13 @@ class CreateFormationsTable extends Migration
     {
         Schema::create('formations', function (Blueprint $table) {
             $table->id();
+            $table->string("intitule");
+            $table->integer("duree");
+            $table->string("cible",30)->nullable()->default("lapin");
+            $table->string("photo");
+            $table->foreignId('formateur_id')->nullable()->constrained("users")->onDelete("set null");
+            $table->text("description");
+            $table->text("modalite");
             $table->timestamps();
         });
     }

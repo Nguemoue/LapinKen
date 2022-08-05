@@ -11,26 +11,19 @@
                 <div class="col-6 my-2">
                     <div class="card shadow">
                         <div class="card-header d-flex justify-content-between">
-                            <h5 class="card-title">formation N <span class="badge bg-dark">{{ $loop->index +1 }}</span></h5>
-                            <span>Restant : <span class="badge bg-dark">{{$formation->quantite}}</span> </span>
+                            <h4 class="card-title mx-1"><span class="badge bg-dark">#{{ $loop->index +1 }}</span></h4>
+                            <h4>{{$formation->intitule}}</h4>
+                            <h6>{{$formation->prix}} Fcfa</h6>
                         </div>
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col-6"><img class="img-thumbnail img-fluid" src="{{asset('storage/'.$formation->photo1)}}" alt="phot 1"></div>
-                                <div class="col-6"><img class="img-fluid img-thumbnail " src="{{asset('storage/'.$formation->photo2)}}" alt="photo 2"></div>
-                            </div>
+                            <div class="col-12"><img class="img-thumbnail card-img-top img-fluid" src="{{asset('storage/'.$formation->photo)}}" alt="phot 1"></div>
                             <div class="card-text">
-            <h5 class="text-muted my-1">Details</h5>
+                                <h5 class="text-muted my-1">Details</h5>
+                            <span class="badge p-2 bg-dark">publie le : {{$formation->created_at->IsoFormat("LL")}}</span>
 
-                                <ul class="list-group">
-                                    <li class="list-group-item">Race : {{$formation->race }}</li>
-                                    <li class="list-group-item">Fake Prix : {{ $formation->fake_prix }} FCFA</li>
-                                    <li class="list-group-item">Prix Normal : {{ $formation->prix }} FCFA</li>
-                                    <li class="list-group-item">Categorie : {{$formation->categorie }}</li>
-                                    @php
-                                        $age = now()->diff($formation->date_naissance);
-                                    @endphp
-                                    <li class="list-group-item">Age : {{$age->y?$age->y.' ans':'' }} {{$age->m?$age->m." Mois":""}} {{ $age->d }} jours</li>
+                                <ul class="list-group my-1">
+                                    <li class="list-group-item">Modalite: <br> {{$formation->modalite}} </li>
+                                    <li class="list-group-item">Description : <br> {{$formation->description}} </li>
                                 </ul>
                             </div>
                         </div>
@@ -49,11 +42,3 @@
         </div>
     </div>
 @endsection
-@push("styles")
-    <style>
-        body{
-            font-family: "Open Sans";
-        }
-    </style>
-@endpush
-    

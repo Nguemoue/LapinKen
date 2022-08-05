@@ -38,7 +38,7 @@
                     <div class="single_service">
                          <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
                              <div class="service_icon">
-                                 <img src="img/service/service_icon_1.png" alt="">
+                                 <img src="img/service/lapin.png" class="img-fluid" alt="">
                              </div>
                          </div>
                          <div class="service_content text-center">
@@ -51,11 +51,11 @@
                     <div class="single_service active">
                          <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
                              <div class="service_icon">
-                                 <img src="img/service/service_icon_2.png" alt="">
+                                 <img src="img/service/volaille.jpg" width="50%" alt="">
                              </div>
                          </div>
                          <div class="service_content text-center">
-                            <h3>Ventes des Vollaies</h3>
+                            <h3>Ventes des Volailles</h3>
                             <p>vous avez ici a votre dispositions des poulets et aussi des cailles</p>
                          </div>
                     </div>
@@ -64,7 +64,7 @@
                     <div class="single_service">
                          <div class="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
                              <div class="service_icon">
-                                 <img src="img/service/service_icon_3.png" alt="">
+                                 <img src="img/service/prestation.jpg" alt="">
                              </div>
                          </div>
                          <div class="service_content text-center">
@@ -84,7 +84,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-6">
                     <div class="pet_thumb">
-                        <img src="img/about/pet_care.png" alt="">
+                        <img src="img/logo.jpg" class="img-fluid" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 offset-lg-1 col-md-6">
@@ -125,25 +125,32 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6">
                                 <div class="single_adapt text-center">
-                                    <img src="img/adapt_icon/1.png" alt="">
+                                    <img src="img/adapt_icon/lapin.jpg" alt="">
                                     <div class="adapt_content">
-                                        <h3 class="counter">452</h3>
+                                        <h3 class="_counter">{{$totalCount->lapin}}</h3>
                                         <p>Lapins Disponibles</p>
+                                    </div>
+                                </div>
+                                <div class="single_adapt text-center">
+                                    <img src="img/adapt_icon/chien.jpg" alt="">
+                                    <div class="adapt_content">
+                                        <h3 class="_counter">{{$totalCount->lapin}}</h3>
+                                        <p>Chiens Disponoble</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <div class="single_adapt text-center">
-                                    <img src="img/adapt_icon/3.png" alt="">
+                                    <img src="img/adapt_icon/caille.jpg" alt="">
                                     <div class="adapt_content">
-                                        <h3><span class="counter">52</span>+</h3>
-                                        <p>Volaille Disponibles</p>
+                                        <h3><span class="_counter">{{$totalCount->caille}}</span>+</h3>
+                                        <p>Cailles Disponibles</p>
                                     </div>
                                 </div>
                                 <div class="single_adapt text-center">
-                                    <img src="img/adapt_icon/2.png" alt="">
+                                    <img src="img/adapt_icon/cochon.jpg" alt="">
                                     <div class="adapt_content">
-                                        <h3><span class="counter">52</span>+</h3>
+                                        <h3><span class="_counter">{{$totalCount->cochon}}</span>+</h3>
                                         <p>Cochons D'indes Disponible</p>
                                     </div>
                                 </div>
@@ -221,7 +228,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_team">
                         <div class="thumb">
-                            <img src="img/team/2.png" alt="">
+                            <img src="img/team/stephane.jpg" alt="">
                         </div>
                         <div class="member_name text-center">
                             <div class="mamber_inner">
@@ -234,7 +241,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_team">
                         <div class="thumb">
-                            <img src="img/team/1.png" alt="">
+                            <img src="img/team/ristelle.jpg" alt="">
                         </div>
                         <div class="member_name text-center">
                             <div class="mamber_inner">
@@ -247,11 +254,11 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_team">
                         <div class="thumb">
-                            <img src="img/team/3.png" alt="">
+                            <img src="img/team/luc.jpg" alt="">
                         </div>
                         <div class="member_name text-center">
                             <div class="mamber_inner">
-                                <h4>K </h4>
+                                <h4>N.Luc</h4>
                                 <p>Partenaire</p>
                             </div>
                         </div>

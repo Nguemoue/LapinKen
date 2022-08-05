@@ -44,9 +44,10 @@
                                         <li> <a href="{{route('cochons')}}" @class(['active' => Route::is('cochons')])>Cochons</a> </li>
                                         <li><a href="{{route('cailles')}}"  @class(['active' => Route::is('cailles')]) >Cailles</a></li>
                                         <li><a href="{{route('chiens')}}"  @class(['active' => Route::is('chiens')])>Chiens</a></li>
-                                        @auth
-                                            <li> <a href="{{ route('dashboard') }}" >Dashboard</a></l>
-                                        @endauth
+                                        <li><a href="{{route('formations')}}"  @class(['active' => Route::is('formations')])>Formations</a></li>
+                                        @can("admin")
+                                            <li> <a href="{{ route('admin') }}" >administration</a></l>
+                                        @endcan
                                         @guest
                                             <li class="btn-group"><a href="{{route('login')}}">se connecter</a></li>
                                         @endguest

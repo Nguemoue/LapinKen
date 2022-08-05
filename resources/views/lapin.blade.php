@@ -30,7 +30,7 @@
                                     </button>
 
                                     <!-- Modal -->
-                                    <div class="modal fade" id="lapinModel{{ $lapin->id }}" tabindex="-1"
+                                    <div class="modal fade w-100" id="lapinModel{{ $lapin->id }}" tabindex="-1"
                                         role="dialog" aria-labelledby="#lapinModel{{ $lapin->id }}" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
@@ -44,10 +44,9 @@
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <div>
-                                                        <img src="{{ asset('storage/' . $lapin->photo1) }}" alt="">
-                                                        <img src="{{ asset('storage/' . $lapin->photo2) }}" alt="">
-
+                                                    <div class="">
+                                                        <img class="img-fluid" src="{{ asset('storage/' . $lapin->photo2) }}" alt="">
+                                                        <img class="img-fluid" src="{{ asset('storage/' . $lapin->photo1) }}" alt="">
                                                     </div>
                                                     <hr>
                                                     <p>
@@ -83,7 +82,7 @@
                                         <s class="badge bg-danger">{{ $lapin->fake_prix * 2 }} FCFA</s>
                                         <span class="badge bg-secondary text-light">Prix : {{ $lapin->prix }} FCFA</span>
                                     </div>
-                                    <a class="btn btn-outline-secondary" href="{{ $lapin->id }}"> <span
+                                    <a class="btn btn-outline-secondary" href="{{ route('lapin.commander',['id'=>$lapin->id]) }}"> <span
                                             class="fa fa-cart-plus"></span> &nbsp; Commander</a>
                                 </div>
                             </div>
@@ -97,13 +96,7 @@
             </div>
         </div>
     </div>
-@endsection
+    <br>
+    @endsection
 
 
-@push('scripts')
-    <script></script>
-@endpush
-
-@push('styles')
-    <style></style>
-@endpush

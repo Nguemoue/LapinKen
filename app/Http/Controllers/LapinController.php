@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Animal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use phpDocumentor\Reflection\Types\Self_;
-
+use App\Models\TypeAnimal;
 class LapinController extends Controller
 {
     //
@@ -34,5 +33,10 @@ class LapinController extends Controller
         
         $current_categorie=$current_categorie??"all";
         return view("lapin",compact("lapins","categories","current_categorie"));
+    }
+
+    function commander($id){
+        $lapin = TypeAnimal::query()->join("animals","type_animals.id","=","animals.id")->where("nom","like","%lapin%")->select('animals.*')->get();
+        return view('lapin_commande',compact('lapin'));
     }
 }

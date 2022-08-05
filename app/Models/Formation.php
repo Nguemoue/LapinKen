@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Formation extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'intitule', "duree", "prix", "modalite", "description", "photo"
+    ];
 }

@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Storage;
 
 class AdminCochonController extends Controller
 {
-    const CATEGORIES = ["vivace", "5"];
+    const CATEGORIES = ["vivace"];
+    
     /**
      * Display a listing of the resource.
      *
