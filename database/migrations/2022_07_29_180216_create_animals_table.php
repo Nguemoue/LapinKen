@@ -18,7 +18,7 @@ class CreateAnimalsTable extends Migration
             $table->string("photo1")->nullable(true)->default("lapins/photo_lapin.jpg");
             $table->string("photo2")->nullable(true)->default("lapins/photo_lapin.jpg");
             $table->integer("fake_prix")->default(0);
-            $table->set("sexe",["Masculin","Feminin"])->default("Masculin");
+            $table->enum("sexe",["Masculin","Feminin"])->default("Masculin");
             $table->foreignId("type_animal")->constrained();
             $table->integer("prix");
             $table->string("categorie");
