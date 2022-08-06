@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-lg-5 col-md-6">
                         <div class="slider_text">
-                            <h3>Bienvenue Chez <br> <span>LapinKen</span></h3>
+                            <h3>Bienvenue Chez <br> <span>LAPIN-KEN</span></h3>
                             <p>Ici trouvez la solutions pour vos lapins</p>
                             <a href="contact.html" class="boxed-btn4">Nous Contacter</a>
                         </div>
