@@ -17,6 +17,7 @@ class AdminController extends Controller
         
         if ($request->file("profil")) {
             $name = $request->file("profil")->store("avatar");
+            Storage::delete(auth()->user()->photo);
             auth()->user()->photo = $name;
             $userid = auth()->user()->id;
             User::query()->where("id","=",$userid)->update([

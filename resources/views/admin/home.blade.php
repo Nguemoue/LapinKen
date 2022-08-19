@@ -2,7 +2,7 @@
 
 @section('main')
 <h3 class="text-center shadow mx-4 p-2 bg-gradient my-3 text-uppercase" style="text-shadow: -1px -1px 1px black">
-        Pannel D'administration
+        Pannel D'administration   {{ auth()->user()->photo }}
     </h3>
     <div class="container">
         <hr>
